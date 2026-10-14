@@ -13,8 +13,8 @@ pipeline{
         }
         stage('cleanup'){
             steps{
-                sh "docker stop backend || true"
-                sh "docker rm backend || true"
+                sh "docker stop backend-container || true"
+                sh "docker rm backend-container || true"
             }
         }
         stage('run'){
